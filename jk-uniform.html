@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #collar {
+            position: absolute;
+            height: 150px;
+            width: 150px;
+            perspective: 100;
+            -webkit-perspective: 100;            
+            left: 45%;
+            top: 20%;
+            /* Safari and Chrome */
+        }
+
+        #collar-layer1 {
+            left: 50%;
+            top: 50%;
+            position: absolute;
+            border-top: 18px solid white;
+            border-left: 50px solid #e9dec2;
+            border-right: 50px solid #e9dec2;
+            border-bottom: 45px solid #e9dec2;
+            transform: rotateX(45deg);
+            -webkit-transform: translateX(-50%) translateY(-50%) rotateX(25deg);
+
+        }
+
+        #collar-layer2 {
+            left: 50%;
+            top: 52%;
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            transform: translateX(-50%) translateY(-50%) rotateX(25deg) translateZ(0);
+        }
+
+        #collar-layer2>.half-strip-left {
+
+            height: 60px;
+            width: 50px;
+            background:linear-gradient(to right, #b13b3b 0%, #b13b3b 2%, transparent 2%, transparent 100%),
+                       linear-gradient(200deg, transparent 0%, transparent 23%, #b13b3b 23%, #b13b3b 25%, transparent 25%, transparent 100%);
+            background-clip: content-box;
+            background-repeat: no-repeat;
+            box-sizing: border-box;
+            border: 5px solid transparent;
+            border-right: 0px;
+        }
+
+        #collar-layer2>.half-strip-right {
+
+            height: 60px;
+            width: 50px;
+            background: linear-gradient(to left, #b13b3b 0%, #b13b3b 2%, transparent 2%, transparent 100%),
+                        linear-gradient(160deg, transparent 0%, transparent 23%, #b13b3b 23%, #b13b3b 25%, transparent 25%, transparent 100%);
+            background-clip: content-box;
+
+            background-repeat: no-repeat;
+            box-sizing: border-box;
+            border: 5px solid transparent;
+            border-left: 0px;
+        }
+
+        #collar-layer3 {
+            left: 50%;
+            top: 39%;
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            transform: rotateX(45deg);
+            -webkit-transform: translateX(-50%) rotateX(25deg);
+        }
+
+        #collar-layer3>.half-strip-left {
+
+            height: 47px;
+            width: 45px;
+            background:linear-gradient(to right, #b13b3b 0%, #b13b3b 2%, transparent 2%, transparent 100%),
+                       linear-gradient(196deg, transparent 0%, transparent 23%, #b13b3b 23%, #b13b3b 25%, transparent 25%, transparent 100%);
+            background-clip: content-box;
+
+            background-repeat: no-repeat;
+            box-sizing: border-box;
+            border: 5px solid transparent;
+            border-right: 0px;
+        }
+
+        #collar-layer3>.half-strip-right {
+            height: 47px;
+            width: 45px;
+            background: linear-gradient(to left, #b13b3b 0%, #b13b3b 2%, transparent 2%, transparent 100%),
+                        linear-gradient(166deg, transparent 0%, transparent 23%, #b13b3b 23%, #b13b3b 25%, transparent 25%, transparent 100%);
+            background-clip: content-box;
+
+            background-repeat: no-repeat;
+            box-sizing: border-box;
+            border: 5px solid transparent;
+            border-left: 0px;
+        }
+
+        .shirt {
+            position: absolute;
+            height: 150px;
+            width: 150px;
+            perspective: 300;
+            -webkit-perspective: 300;            
+            top: -80px;
+            left: 45%;
+            top: 34%;
+
+        }
+
+        .shirt>.shirt-layer{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            height:420px;
+            width:390px;
+            background-color:#b13b3b;
+            transform: translateX(-50%) translateY(-50%);
+            -webkit-transform: translateX(-50%) translateY(-50%) scale(0.5) ;
+            clip-path: polygon(33.3% 0%,22% 11%,0% 84%,5% 95%,4.5% 97%,10% 98%,50% 100%,90% 98%,95.5% 97%,95% 95%,100% 90%,85% 10%,70% 0%);
+        }
+
+        .skirt {
+            position: absolute;
+            height: 150px;
+            width: 150px;
+            perspective: 300;
+            -webkit-perspective: 300;
+            
+            
+        }
+
+        .test {
+            background: radial-gradient(circle at 100px -45px,#e9dec2 0px,#e9dec2 130px,#b13b3b 130px,#b13b3b 132px,#e9dec2 132px,#e9dec2 138px,#b13b3b 138px,#b13b3b 140px,#e9dec2 140px, #e9dec2 145px, #b13b3b 145px);
+            height:100px;
+            width:100px;
+            clip-path: polygon(50% 0%,0% 40%,0% 100%,100% 100%);
+            position:absolute;
+            /* transform:scale(0.5); */
+            
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="collar">
+        <div id="collar-layer1">
+        </div>
+        <div id="collar-layer2">
+            <div class="half-strip-left"></div>
+            <div class="half-strip-right"></div>
+        </div>
+        <div id="collar-layer3">
+            <div class="half-strip-left"></div>
+            <div class="half-strip-right"></div>
+        </div>
+    </div>
+    <div class="shirt">
+        <div class="shirt-layer"></div>
+    </div>
+    <div class="skirt">
+    </div>
+
+    <div class="test">
+        
+    </div>
+</body>
+
+</html>
