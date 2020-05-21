@@ -10,7 +10,7 @@
             perspective: 100;
             -webkit-perspective: 100;
             left: 45%;
-            top: 25%;
+            top: 200px;
             transform: scale(0.78);
             /* Safari and Chrome */
         }
@@ -109,7 +109,7 @@
             -webkit-perspective: 300;
             top: -80px;
             left: 45%;
-            top: 34%;
+            top: 285px;
 
         }
 
@@ -122,8 +122,8 @@
             background-color: #b13b3b;
             transform: translateX(-50%) translateY(-50%);
             -webkit-transform: translateX(-50%) translateY(-50%);
-            clip-path: polygon(49px 0px, 26px 16px, 0px 130px, 8px 142px, 7px 149px, 19px 151px, 20px 148px, 70px 152px,
-                    120px 148px, 121px 151px, 133px 149px, 132px 142px, 140px 130px, 114px 16px, 91px 0px);
+            clip-path: polygon(49px 0px, 26px 16px, 0px 130px, 7px 142px, 6px 149px, 19px 151px, 20px 148px, 70px 152px,
+                    120px 148px, 121px 151px, 134px 149px, 133px 142px, 140px 130px, 114px 16px, 91px 0px)
         }
 
         .skirt {
@@ -169,10 +169,34 @@
 
         .button {
             background: #e9dec2;
-            width:5px;
-            height:5px;
-            margin-bottom:15px;
-            border-radius:50%;
+            width: 5px;
+            height: 5px;
+            margin-bottom: 15px;
+            border-radius: 50%;
+        }
+
+        .pocket-left {
+            position: absolute;
+            height: 27px;
+            width: 25px;
+            border: 1px solid black;
+            border-radius: 0px 0px 5px 5px;
+            background: linear-gradient(#e9dec2 0px, #e9dec2 2px, #b13b3b 2px);
+            left: 18%;
+            top: 66%;
+
+        }
+
+        .pocket-right {
+            position: absolute;
+            height: 27px;
+            width: 25px;
+            border: 1px solid black;
+            border-radius: 0px 0px 5px 5px;
+            background: linear-gradient(#e9dec2 0px, #e9dec2 2px, #b13b3b 2px);
+            right: 18%;
+            top: 66%;
+
         }
     </style>
 </head>
@@ -202,11 +226,17 @@
                 <div class="button"></div>
                 <div class="button"></div>
             </div>
+            <div class="pocket-left">
+            </div>
+            <div class="pocket-right">
+            </div>
         </div>
     </div>
-    <div class="skirt">
-        ddd
-    </div>
+    <div>
+        <div class="test"></div>
+        <div class="skirt">
+            ddd
+        </div>
 
 
 
