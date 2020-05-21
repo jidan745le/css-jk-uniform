@@ -8,9 +8,10 @@
             height: 150px;
             width: 150px;
             perspective: 100;
-            -webkit-perspective: 100;            
+            -webkit-perspective: 100;
             left: 45%;
-            top: 20%;
+            top: 25%;
+            transform: scale(0.78);
             /* Safari and Chrome */
         }
 
@@ -40,8 +41,8 @@
 
             height: 60px;
             width: 50px;
-            background:linear-gradient(to right, #b13b3b 0%, #b13b3b 2%, transparent 2%, transparent 100%),
-                       linear-gradient(200deg, transparent 0%, transparent 23%, #b13b3b 23%, #b13b3b 25%, transparent 25%, transparent 100%);
+            background: linear-gradient(to right, #b13b3b 0%, #b13b3b 2%, transparent 2%, transparent 100%),
+                linear-gradient(200deg, transparent 0%, transparent 23%, #b13b3b 23%, #b13b3b 25%, transparent 25%, transparent 100%);
             background-clip: content-box;
             background-repeat: no-repeat;
             box-sizing: border-box;
@@ -54,7 +55,7 @@
             height: 60px;
             width: 50px;
             background: linear-gradient(to left, #b13b3b 0%, #b13b3b 2%, transparent 2%, transparent 100%),
-                        linear-gradient(160deg, transparent 0%, transparent 23%, #b13b3b 23%, #b13b3b 25%, transparent 25%, transparent 100%);
+                linear-gradient(160deg, transparent 0%, transparent 23%, #b13b3b 23%, #b13b3b 25%, transparent 25%, transparent 100%);
             background-clip: content-box;
 
             background-repeat: no-repeat;
@@ -77,8 +78,8 @@
 
             height: 47px;
             width: 45px;
-            background:linear-gradient(to right, #b13b3b 0%, #b13b3b 2%, transparent 2%, transparent 100%),
-                       linear-gradient(196deg, transparent 0%, transparent 23%, #b13b3b 23%, #b13b3b 25%, transparent 25%, transparent 100%);
+            background: linear-gradient(to right, #b13b3b 0%, #b13b3b 2%, transparent 2%, transparent 100%),
+                linear-gradient(196deg, transparent 0%, transparent 23%, #b13b3b 23%, #b13b3b 25%, transparent 25%, transparent 100%);
             background-clip: content-box;
 
             background-repeat: no-repeat;
@@ -91,7 +92,7 @@
             height: 47px;
             width: 45px;
             background: linear-gradient(to left, #b13b3b 0%, #b13b3b 2%, transparent 2%, transparent 100%),
-                        linear-gradient(166deg, transparent 0%, transparent 23%, #b13b3b 23%, #b13b3b 25%, transparent 25%, transparent 100%);
+                linear-gradient(166deg, transparent 0%, transparent 23%, #b13b3b 23%, #b13b3b 25%, transparent 25%, transparent 100%);
             background-clip: content-box;
 
             background-repeat: no-repeat;
@@ -105,44 +106,73 @@
             height: 150px;
             width: 150px;
             perspective: 300;
-            -webkit-perspective: 300;            
+            -webkit-perspective: 300;
             top: -80px;
             left: 45%;
             top: 34%;
 
         }
 
-        .shirt>.shirt-layer{
+        .shirt>.shirt-layer {
             position: absolute;
             left: 50%;
             top: 50%;
-            height:420px;
-            width:390px;
-            background-color:#b13b3b;
+            height: 152px;
+            width: 140px;
+            background-color: #b13b3b;
             transform: translateX(-50%) translateY(-50%);
-            -webkit-transform: translateX(-50%) translateY(-50%) scale(0.5) ;
-            clip-path: polygon(33.3% 0%,22% 11%,0% 84%,5% 95%,4.5% 97%,10% 98%,50% 100%,90% 98%,95.5% 97%,95% 95%,100% 90%,85% 10%,70% 0%);
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            clip-path: polygon(49px 0px, 26px 16px, 0px 130px, 8px 142px, 7px 149px, 19px 151px, 20px 148px, 70px 152px,
+                    120px 148px, 121px 151px, 133px 149px, 132px 142px, 140px 130px, 114px 16px, 91px 0px);
         }
 
         .skirt {
-            position: absolute;
-            height: 150px;
-            width: 150px;
-            perspective: 300;
-            -webkit-perspective: 300;
-            
-            
+            position: relative;
+            padding: 10px;
+
+
+
         }
 
-        .test {
-            background: radial-gradient(circle at 100px -45px,#e9dec2 0px,#e9dec2 130px,#b13b3b 130px,#b13b3b 132px,#e9dec2 132px,#e9dec2 138px,#b13b3b 138px,#b13b3b 140px,#e9dec2 140px, #e9dec2 145px, #b13b3b 145px);
-            height:100px;
-            width:100px;
-            clip-path: polygon(50% 0%,0% 40%,0% 100%,100% 100%);
-            position:absolute;
-            /* transform:scale(0.5); */
-            
+        .collar-front {
+            background: radial-gradient(circle at 100px -18px, #e9dec2 0px, #e9dec2 99px, #b13b3b 99px, #b13b3b 101px, #e9dec2 101px, #e9dec2 106px, #b13b3b 106px, #b13b3b 108px, #e9dec2 108px, #e9dec2 113px, #b13b3b 113px);
+            height: 100px;
+            width: 100px;
+            clip-path: polygon(50% 0%, 0% 35%, 0% 100%, 100% 100%);
+            position: absolute;
+            transform: scale(0.42);
+        }
 
+        .collar-front-left {
+            top: -27px;
+            left: -3px;
+            transform: scale(0.47) rotateY(0deg);
+        }
+
+
+        .collar-front-right {
+            top: -27px;
+            right: -3px;
+            transform: scale(0.47) rotateY(180deg);
+        }
+
+        .button-strip {
+            position: absolute;
+            height: 105px;
+            width: 5px;
+            border: 0.5px solid black;
+            background: #b13b3b;
+            left: 50%;
+            top: 30%;
+            transform: translateX(-50%);
+        }
+
+        .button {
+            background: #e9dec2;
+            width:5px;
+            height:5px;
+            margin-bottom:15px;
+            border-radius:50%;
         }
     </style>
 </head>
@@ -162,14 +192,25 @@
         </div>
     </div>
     <div class="shirt">
-        <div class="shirt-layer"></div>
+        <div class="shirt-layer">
+            <div class="collar-front collar-front-left"></div>
+            <div class="collar-front collar-front-right"></div>
+            <div class="button-strip">
+                <div class="button"></div>
+                <div class="button"></div>
+                <div class="button"></div>
+                <div class="button"></div>
+                <div class="button"></div>
+            </div>
+        </div>
     </div>
     <div class="skirt">
+        ddd
     </div>
 
-    <div class="test">
-        
-    </div>
+
+
+
 </body>
 
 </html>
