@@ -9,9 +9,10 @@
             width: 150px;
             perspective: 100;
             -webkit-perspective: 100;
-            left: 45%;
-            top: 200px;
-            transform: scale(0.78);
+            left: 50%;
+            top: 50px;
+            transform: translateX(-50%) scale(0.78);
+            -webkit-transform: translateX(-50%) scale(0.78);
             /* Safari and Chrome */
         }
 
@@ -38,7 +39,6 @@
         }
 
         #collar-layer2>.half-strip-left {
-
             height: 60px;
             width: 50px;
             background: linear-gradient(to right, #b13b3b 0%, #b13b3b 2%, transparent 2%, transparent 100%),
@@ -51,13 +51,11 @@
         }
 
         #collar-layer2>.half-strip-right {
-
             height: 60px;
             width: 50px;
             background: linear-gradient(to left, #b13b3b 0%, #b13b3b 2%, transparent 2%, transparent 100%),
                 linear-gradient(160deg, transparent 0%, transparent 23%, #b13b3b 23%, #b13b3b 25%, transparent 25%, transparent 100%);
             background-clip: content-box;
-
             background-repeat: no-repeat;
             box-sizing: border-box;
             border: 5px solid transparent;
@@ -101,19 +99,17 @@
             border-left: 0px;
         }
 
-        .shirt {
+        .cloth {
             position: absolute;
             height: 150px;
             width: 150px;
-            perspective: 300;
-            -webkit-perspective: 300;
-            top: -80px;
-            left: 45%;
-            top: 285px;
-
+            left: 50%;
+            top: 135px;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%)
         }
 
-        .shirt>.shirt-layer {
+        .cloth>.cloth-layer {
             position: absolute;
             left: 50%;
             top: 50%;
@@ -124,14 +120,6 @@
             -webkit-transform: translateX(-50%) translateY(-50%);
             clip-path: polygon(49px 0px, 26px 16px, 0px 130px, 7px 142px, 6px 149px, 19px 151px, 20px 148px, 70px 152px,
                     120px 148px, 121px 151px, 134px 149px, 133px 142px, 140px 130px, 114px 16px, 91px 0px)
-        }
-
-        .skirt {
-            position: relative;
-            padding: 10px;
-
-
-
         }
 
         .collar-front {
@@ -156,11 +144,21 @@
             transform: scale(0.47) rotateY(180deg);
         }
 
+        .collar-front-center {
+            position: absolute;
+            height: 25px;
+            width: 25px;
+            background: linear-gradient(#e9dec2 0px, #e9dec2 2px, #b13b3b 2px, #b13b3b 3px, #e9dec2 3px, #e9dec2 5px, #b13b3b 5px, #b13b3b 7px, #e9dec2 7px);
+            z-index: -1;
+            left: 58px;
+            top: 20px
+        }
+
         .button-strip {
             position: absolute;
             height: 105px;
             width: 5px;
-            border: 0.5px solid black;
+            border: 0.5px solid #9a3634;
             background: #b13b3b;
             left: 50%;
             top: 30%;
@@ -179,7 +177,7 @@
             position: absolute;
             height: 27px;
             width: 25px;
-            border: 1px solid black;
+            border: 1px solid #9a3634;
             border-radius: 0px 0px 5px 5px;
             background: linear-gradient(#e9dec2 0px, #e9dec2 2px, #b13b3b 2px);
             left: 18%;
@@ -191,18 +189,128 @@
             position: absolute;
             height: 27px;
             width: 25px;
-            border: 1px solid black;
+            border: 1px solid #9a3634;
             border-radius: 0px 0px 5px 5px;
             background: linear-gradient(#e9dec2 0px, #e9dec2 2px, #b13b3b 2px);
             right: 18%;
             top: 66%;
+        }
 
+        .sleeve-left {
+            position: absolute;
+            width: 14px;
+            height: 10px;
+            background: linear-gradient(0deg, #e9dec2 0px, #e9dec2 2px, #b13b3b 2px, #b13b3b 3px, #e9dec2 3px, #e9dec2 5px, #b13b3b 5px, #b13b3b 6px, #e9dec2 6px, #e9dec2 8px, #b13b3b 8px);
+            left: 6px;
+            bottom: 2px;
+            transform: rotate(10deg);
+            border-top: 0px;
+        }
+
+        .sleeve-right {
+            position: absolute;
+            width: 14px;
+            height: 10px;
+            background: linear-gradient(0deg, #e9dec2 0px, #e9dec2 2px, #b13b3b 2px, #b13b3b 3px, #e9dec2 3px, #e9dec2 5px, #b13b3b 5px, #b13b3b 6px, #e9dec2 6px, #e9dec2 8px, #b13b3b 8px);
+            right: 6px;
+            bottom: 2px;
+            transform: rotate(-10deg);
+            border-top: 0px;
+        }
+
+        .bottom-line-left {
+            position: absolute;
+            width: 47px;
+            border-bottom: 0.5px solid #9a3634;
+            left: 21px;
+            top: 147px;
+            transform-origin: left top;
+            transform: rotate(5deg);
+        }
+
+        .bottom-line-right {
+            position: absolute;
+            width: 47px;
+            border-bottom: 0.5px solid #9a3634;
+            right: 21px;
+            top: 147px;
+            transform-origin: right top;
+            transform: rotate(-5deg);
+        }
+
+        .skirt {
+            position: absolute;
+            height: 150px;
+            width: 150px;
+            left: 50%;
+            top: 250px;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            z-index: -1;
+        }
+
+        .skirt-bottom {
+            position: absolute;
+            height: 82px;
+            width: 95px;
+            background: #b13b3b;
+            left: 50%;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            border-radius: 0% 0% 50% 50%/0% 0% 6% 6%;
+        }
+
+
+
+        .skirt-up {
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: space-between;
+            height: 80px;
+            width: 95px;
+            left: 50%;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+        }
+
+        .skirt-fold {
+            height: 60px;
+            width: 12%;
+            background: #b13b3b;
+            border: 1px solid #9a3634;
+            transform-origin: 0 0;
+
+        }
+
+        .fold1 {
+            transform: translateY(2px) rotate(7deg);
+        }
+
+        .fold2 {
+            transform: translateY(4px) rotate(5deg);
+        }
+
+        .fold3 {
+            transform: translateY(5px) rotate(1deg);
+        }
+
+        .fold4 {
+            transform: translateY(5px) rotate(-1deg);
+        }
+
+        .fold5 {
+            transform: translateY(4px) rotate(-5deg);
+        }
+
+        .fold6 {
+            transform: translateY(2px) rotate(-7deg);
         }
     </style>
 </head>
 
 <body>
-
     <div id="collar">
         <div id="collar-layer1">
         </div>
@@ -215,10 +323,11 @@
             <div class="half-strip-right"></div>
         </div>
     </div>
-    <div class="shirt">
-        <div class="shirt-layer">
+    <div class="cloth">
+        <div class="cloth-layer">
             <div class="collar-front collar-front-left"></div>
             <div class="collar-front collar-front-right"></div>
+            <div class="collar-front-center"></div>
             <div class="button-strip">
                 <div class="button"></div>
                 <div class="button"></div>
@@ -230,17 +339,24 @@
             </div>
             <div class="pocket-right">
             </div>
+            <div class="sleeve-left"></div>
+            <div class="sleeve-right"></div>
+            <div class="bottom-line-left"></div>
+            <div class="bottom-line-right"></div>
         </div>
     </div>
-    <div>
-        <div class="test"></div>
-        <div class="skirt">
-            ddd
+
+    <div class="skirt">
+        <div class="skirt-bottom"></div>
+        <div class="skirt-up">
+            <div class="skirt-fold fold1"></div>
+            <div class="skirt-fold fold2"></div>
+            <div class="skirt-fold fold3"></div>
+            <div class="skirt-fold fold4"></div>
+            <div class="skirt-fold fold5"></div>
+            <div class="skirt-fold fold6"></div>
         </div>
-
-
-
-
+    </div>
 </body>
 
 </html>
